@@ -1,0 +1,162 @@
+Java Script Assignment 
+Code1
+
+function halv_array_swap(arra) {
+  if (((arra.length)%2)!=0)
+    {
+    return false;
+    }
+
+  for (var i = 0; i < arra.length / 2; i++) {
+    var temp = arra[i];
+    arra[i] = arra[i + arra.length / 2];
+    arra[i + arra.length / 2] = temp;
+  }
+  return arra;
+}
+
+console.log(halv_array_swap([1,2,3,4,5,6]));
+console.log(halv_array_swap([1,2,3,4,5,6,7]);
+==================================================================================
+  
+Code 2
+
+let result;
+function calculate(num1,num2,operation){
+
+
+ 
+  switch(operation)
+  {
+       case "add":
+     result=num1+num2;
+      break;
+      case "sub":
+    result=num1-num2;
+          break;
+          case "mul":
+              result=num1*num2;
+              break;
+              case "div":
+              result=num1/num2;
+              break;
+              default:
+               console.log("Invalid operation");
+               return;
+              
+                 
+   
+  }
+  console.log(result);}
+ calculate(11,11,"add");
+ console.log("addition of 11&11 is" + result);
+ calculate(56,23,"sub");
+ console.log("subtraction of 56&23 is" + result);
+ calculate(3,3,"mul");
+ console.log("multiplication  of 3&3is" + result);
+ 
+ calculate(10,5,"div");
+ console.log("division  of 10&5 is" + result);
+================================================================================
+
+Code 3
+function  max_diff(arr)
+{
+    var max = -1;
+    var temp;
+	for (var i = 0; i < arr.length - 1; i++)
+      {
+		temp = Math.abs(arr[i] - arr[i + 1]);
+		max = Math.max(max, temp);
+	  }
+	return max;
+}
+
+console.log(max_diff([4,5,6,23,9]));
+
+==================================================================================
+Code 4
+function objectdetails(object)
+{
+    //for keys
+    console.log("key")
+    
+    for(var key in object)
+    {
+        console.log(key);
+    }
+    //for values
+     console.log("values")
+    for(var key in  object )
+    {
+       console.log(object[key]);
+        
+    }
+        
+    //for length
+    var keyCount = 0;
+  for (var key in object) {
+    keyCount++;
+  }
+  console.log("Length of object keys:");
+  console.log(keyCount);
+}
+var student={
+  name:"john",
+  rollno:10
+    
+};
+objectdetails(student);
+==================================================================================
+Code 5
+var age = prompt("Enter your age");
+if(age>18)
+{
+  console.log("Congratulations! You are eligible for voting")
+}
+else
+{
+    console.log("you are not eligible")
+    
+}
+=================================================================================
+Code 6
+function greet(name, myFunction) {
+    console.log('Hello world');
+      myFunction(name);
+}
+function sayName(name) {
+    console.log('Hello' + ' ' + name);
+}
+
+setTimeout(greet, 2000, 'Veera', sayName);
+==================================================================================
+
+Code 7
+function areArraysEqual(array1, array2) {
+  if (array1.length !== array2.length) {
+    return "Different";
+  }
+
+   sortedArray1 = array1.slice().sort();
+   sortedArray2 = array2.slice().sort();
+
+  for (let i = 0; i < sortedArray1.length; i++) {
+    if (sortedArray1[i] !== sortedArray2[i]) {
+      return "Different";
+    }
+  }
+
+  return "Same";
+}
+
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [5, 4, 1, 2, 3];
+console.log(areArraysEqual(array1, array2));  
+
+const array3 = [1, 2, 3, 4, 5];
+const array4 = [5, 4, 1, 2, 6];
+console.log(areArraysEqual(array3, array4));  
+
+
